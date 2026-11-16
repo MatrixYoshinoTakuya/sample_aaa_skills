@@ -1,0 +1,12 @@
+L1	pass	evidence/play.png	濃紺の背景、金縁の筐体、発光する図柄、ネオン管の看板と枠を確認。図柄8種の描き分けは evidence/figures.png
+L2	pass	evidence/play.png	参照なしの指定どおり、参照物は使っていない
+L3	pass	evidence/play.png	2D、筐体正面の固定画面
+F1	pass	evidence/play.png	3リール×3段の窓と左右の5ライン表示。左から順の停止は index.html:300
+F2	pass	evidence/play.png	図柄8種と払い出し表。ベット2で配当が2倍表示になることは evidence/self-check.tsv の文字行で確認
+F3	pass	index.html:219	ワイルドは王冠以外のどの図柄の代わりにもなる判定
+F4	pass	index.html:313	各リールに王冠でフリースピン8回、配当2倍。走行で突入を確認
+F5	pass	index.html:268	ベット1/2/5/10の切り替え。検査走行でベット2・合計10コインの表示を確認
+F6	pass	index.html:578	所持コインと最高記録の表示、最高記録の保存(self-check.tsvのsaved行)。コイン切れ画面はコードのみで、走行では未到達
+F7	not_assessed	index.html:391	ライン点灯・コイン・看板の明滅はコードにあるが、当たり場面の撮影なし。効果音は聴取できない
+M1	pass	index.html:288	初回の2回目でチェリー揃い(+5を走行で確認)、7回目でフリースピン突入
+C1	not_assessed	config.js:13	払い戻し率は総当たり計算で93.4%。30〜60スピン目の落ち込みと尽きる早さは人のプレイでのみ確認できる

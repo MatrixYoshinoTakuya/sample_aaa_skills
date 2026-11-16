@@ -376,8 +376,17 @@ function drawRoom() {
   }
   ctx.globalAlpha = 1;
 }
+const boxes = new Map(); // each neon frame is drawn once with its glow, then stamped: a blur every frame is slow
 function neonBox(x, y, w, h, r, color, lw, glow = 18) {
-  ctx.save(); ctx.shadowColor = color; ctx.shadowBlur = glow; ctx.strokeStyle = color; ctx.lineWidth = lw; rr(x, y, w, h, r); ctx.stroke(); ctx.restore();
+  const key = [w, h, r, color, lw, glow].join(','), pad = glow * 2 + lw;
+  let c = boxes.get(key);
+  if (!c) {
+    c = document.createElement('canvas'); c.width = Math.ceil((w + pad * 2) * 2); c.height = Math.ceil((h + pad * 2) * 2);
+    const main = ctx; ctx = c.getContext('2d'); ctx.setTransform(2, 0, 0, 2, pad * 2, pad * 2);
+    ctx.shadowColor = color; ctx.shadowBlur = glow * 2; ctx.strokeStyle = color; ctx.lineWidth = lw; rr(0, 0, w, h, r); ctx.stroke();
+    ctx = main; boxes.set(key, c);
+  }
+  ctx.drawImage(c, x - pad, y - pad, c.width / 2, c.height / 2);
 }
 function drawSign() { // the signature: a neon tube sign that flickers with the size of the win
   const s = state, x = CAB.x, y = 16, w = CAB.w, h = 76;

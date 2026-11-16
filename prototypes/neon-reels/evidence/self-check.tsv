@@ -1,0 +1,77 @@
+time	2026-11-16 08:51:48
+not_assessed	keep	the brief has no Keep section
+checklist	L1	unlisted	-	Look: 濃紺〜黒の背景に、金色の縁取りの筐体と発光する図柄。シアン=通常図柄の発光、マゼンタ=ワイルド/フリースピン、金=配当とコイン、赤=7。影は寒色、光は暖色。図柄は丸みのある太い輪郭で描き分ける（チェリー、レモン、ベル、BAR、ダイヤ、7、ワイルドの星、スキャッターの王冠）。当たりラインはネオン管が点灯する。Signature: 筐体上部のネオン管看板が当たりの大きさに応じて明滅する。every figure drawn, no emoji, no plain circles. *(guessed: 詳細)*	
+checklist	L2	unlisted	-	References: なし	
+checklist	L3	unlisted	-	View: 2D · Camera: 筐体正面の固定画面。 *(guessed)*	
+checklist	F1	unlisted	-	3リール×3段、5ライン（横3本・斜め2本）のスピンと左から順の停止	
+checklist	F2	unlisted	-	図柄8種と払い出し表（ベット連動表示）	
+checklist	F3	unlisted	-	ワイルド図柄（他の図柄の代わりになる）	
+checklist	F4	unlisted	-	王冠3つでフリースピン8回、配当2倍	
+checklist	F5	unlisted	-	ベット変更（1/2/5/10コイン×5ライン）	
+checklist	F6	unlisted	-	所持コイン・最高記録の表示と保存、コイン切れの結果画面とやり直し	
+checklist	F7	unlisted	-	当たり演出（ライン点灯、コイン、看板の明滅）と合成音の効果音	
+checklist	M1	unlisted	-	100コインを持って筐体の前に立つ。SPINが脈動して誘い、スペースで3リールが回り左から順に止まる。最初の数回で小役が揃い、点灯したラインとコインの加算で配当の読み方が分かる。ベットを上げると払い出し表の数字が連動して増える。1分以内に王冠が3つ出てフリースピンに入り、配当2倍でコインが跳ねる。	
+checklist	C1	unlisted	-	払い戻し率は約94%で、回し続ければ所持コインは減る。30〜60スピン目あたりで最初の落ち込みが来る。ベットを上げれば記録は伸びやすいが尽きるのも早い。最低ベットを払えなくなれば終了で、100コインからやり直し（最高記録は残る）。 *(guessed: 数値)*	
+browser	HeadlessChrome/153.0.0.0
+scene	play	0	title
+saved	play	0	localstorage	neon-reels.runs
+scene	play	1	play
+saved	play	135	localstorage	neon-reels.best
+digits	log	600 28px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	800 40px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	800 16px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	800 48px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	600 18px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	800 26px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	600 20px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	600 16px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+digits	log	800 34px "Hiragino Sans", "Yu Gothic UI", Meiryo, "Noto Sans CJK JP", "Noto Sans JP", sans-serif	tabular	0
+measure	step-time	play	0.030	7.800	530
+lane	play	stop	8.8	485
+uncaught	play	0
+text	play	canvas	360,32,554,58	58.5	16.23	inside	NEON REELS
+text	play	canvas	779,36,904,52	31.5	16.80	inside	最高記録 更新中
+text	play	canvas	995,32,1052,58	58.5	15.32	inside	103
+text	play	canvas	217,168,222,180	24.0	12.46	inside	1
+text	play	canvas	680,168,685,180	24.0	12.46	inside	1
+text	play	canvas	216,271,224,282	24.0	12.46	inside	2
+text	play	canvas	679,271,687,282	24.0	12.46	inside	2
+text	play	canvas	216,374,224,385	24.0	12.46	inside	3
+text	play	canvas	679,374,687,385	24.0	12.46	inside	3
+text	play	canvas	216,128,224,140	24.0	12.46	inside	4
+text	play	canvas	679,414,687,425	24.0	12.46	inside	4
+text	play	canvas	216,414,224,425	24.0	12.46	inside	5
+text	play	canvas	679,129,687,140	24.0	12.46	inside	5
+text	play	canvas	238,469,276,483	28.5	9.82	inside	コイン
+text	play	canvas	309,503,354,533	70.5	16.46	inside	93
+text	play	canvas	427,465,519,478	27.0	9.19	inside	ベット（1ライン）
+text	play	canvas	466,499,483,525	58.5	17.64	inside	2
+text	play	canvas	429,534,519,547	27.0	13.84	inside	合計 10 コイン
+text	play	canvas	611,492,684,518	61.5	13.16	inside	SPIN
+text	play	canvas	779,98,870,117	36.0	18.05	inside	払い出し表
+text	play	canvas	1021,101,1109,114	27.0	9.51	inside	ベット 2 のとき
+text	play	canvas	902,136,943,150	28.5	15.68	inside	セブン
+text	play	canvas	1068,135,1106,152	39.0	15.94	inside	240
+text	play	canvas	902,171,955,185	28.5	15.75	inside	ワイルド
+text	play	canvas	1068,170,1106,187	39.0	16.01	inside	500
+text	play	canvas	902,204,942,219	28.5	15.77	inside	ダイヤ
+text	play	canvas	1069,204,1106,221	39.0	16.03	inside	100
+text	play	canvas	902,239,931,252	28.5	15.77	inside	バー
+text	play	canvas	1081,239,1106,256	39.0	16.03	inside	50
+text	play	canvas	901,275,932,288	28.5	15.77	inside	ベル
+text	play	canvas	1081,273,1106,290	39.0	16.03	inside	24
+text	play	canvas	903,310,941,323	28.5	15.77	inside	レモン
+text	play	canvas	1082,308,1106,324	39.0	16.03	inside	16
+text	play	canvas	902,343,955,358	28.5	15.77	inside	チェリー
+text	play	canvas	1082,342,1106,359	39.0	16.03	inside	10
+text	play	canvas	901,377,970,392	28.5	15.78	inside	左から2つ
+text	play	canvas	1093,377,1106,393	39.0	16.05	inside	4
+text	play	canvas	822,416,998,432	28.5	14.36	inside	どの図柄の代わりにもなる
+text	play	canvas	902,451,1075,466	28.5	14.36	inside	フリースピン8回・配当2倍
+text	play	canvas	901,473,1067,486	24.0	9.58	inside	各リールに1つずつ出れば成立
+text	play	canvas	780,516,935,530	27.0	14.53	inside	スペース：スピン／早止め
+text	play	canvas	1043,516,1109,530	27.0	14.53	inside	↑↓：ベット
+text	play	canvas	780,538,846,552	27.0	14.53	inside	R：やり直し
+text	play	canvas	1076,538,1109,552	27.0	14.53	inside	M：音
+screen	play	drawn
+responds	changed	34

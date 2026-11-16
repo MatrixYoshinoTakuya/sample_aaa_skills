@@ -1,0 +1,34 @@
+# Publishes the shared build of the Neon Reels one-shot (prototypes/neon-reels/dist) to GitHub Pages.
+# Requires: Settings > Pages > Build and deployment > Source = "GitHub Actions".
+name: Deploy Neon Reels to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make the shared build
+        run: bash .claude/scripts/one-shot-share.sh prototypes/neon-reels
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: prototypes/neon-reels/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
