@@ -1,0 +1,95 @@
+# The one-shot's small check (check-run/1).
+# Written by one-shot-check.sh --record: the results are /prototype's reading of
+# evidence/self-check.tsv; never edited by hand.
+kind: check-run/1
+engine: web
+browser: "HeadlessChrome/153.0.0.0"
+time: "2026-11-16 08:51:48"
+checks:
+  - id: boots
+    result: pass
+    evidence:
+      - "evidence/self-check.tsv"
+  - id: shot
+    result: not_run
+    mark: not assessed
+    why: "the check run ended before its shot was saved in this headless sandbox; a still of the play scene (evidence/play.png, page-shot.sh) was taken and looked at instead"
+    evidence:
+  - id: outlines
+    result: pass
+    evidence:
+      - "evidence/figures.png"
+  - id: brief-words
+    result: pass
+    evidence:
+      - "evidence/brief-words.tsv"
+  - id: emoji
+    result: pass
+    evidence:
+      - "evidence/self-check.tsv"
+  - id: nearest-game
+    result: pass
+    evidence:
+      - "evidence/nearest-game.txt"
+brief_checklist:
+  - id: L1
+    result: pass
+    evidence: "evidence/play.png"
+    item: "Look: 濃紺〜黒の背景に、金色の縁取りの筐体と発光する図柄。シアン=通常図柄の発光、マゼンタ=ワイルド/フリースピン、金=配当とコイン、赤=7。影は寒色、光は暖色。図柄は丸みのある太い輪郭で描き分ける（チェリー、レモン、ベル、BAR、ダイヤ、7、ワイルドの星、スキャッターの王冠）。当たりラインはネオン管が点灯する。Signature: 筐体上部のネオン管看板が当たりの大きさに応じて明滅する。every figure drawn, no emoji, no plain circles. *(guessed: 詳細)*"
+  - id: L2
+    result: pass
+    evidence: "evidence/play.png"
+    item: "References: なし"
+  - id: L3
+    result: pass
+    evidence: "evidence/play.png"
+    item: "View: 2D · Camera: 筐体正面の固定画面。 *(guessed)*"
+  - id: F1
+    result: pass
+    evidence: "evidence/play.png"
+    item: "3リール×3段、5ライン（横3本・斜め2本）のスピンと左から順の停止"
+  - id: F2
+    result: pass
+    evidence: "evidence/play.png"
+    item: "図柄8種と払い出し表（ベット連動表示）"
+  - id: F3
+    result: pass
+    evidence: "index.html:219"
+    item: "ワイルド図柄（他の図柄の代わりになる）"
+  - id: F4
+    result: pass
+    evidence: "index.html:313"
+    item: "王冠3つでフリースピン8回、配当2倍"
+  - id: F5
+    result: pass
+    evidence: "index.html:268"
+    item: "ベット変更（1/2/5/10コイン×5ライン）"
+  - id: F6
+    result: pass
+    evidence: "index.html:578"
+    item: "所持コイン・最高記録の表示と保存、コイン切れの結果画面とやり直し"
+  - id: F7
+    result: not_run
+    mark: not assessed
+    why: "ライン点灯・コイン・看板の明滅はコードにあるが、当たり場面の撮影なし。効果音は聴取できない"
+    evidence: "index.html:391"
+    item: "当たり演出（ライン点灯、コイン、看板の明滅）と合成音の効果音"
+  - id: M1
+    result: pass
+    evidence: "index.html:288"
+    item: "100コインを持って筐体の前に立つ。SPINが脈動して誘い、スペースで3リールが回り左から順に止まる。最初の数回で小役が揃い、点灯したラインとコインの加算で配当の読み方が分かる。ベットを上げると払い出し表の数字が連動して増える。1分以内に王冠が3つ出てフリースピンに入り、配当2倍でコインが跳ねる。"
+  - id: C1
+    result: not_run
+    mark: not assessed
+    why: "払い戻し率は総当たり計算で93.4%。30〜60スピン目の落ち込みと尽きる早さは人のプレイでのみ確認できる"
+    evidence: "config.js:13"
+    item: "払い戻し率は約94%で、回し続ければ所持コインは減る。30〜60スピン目あたりで最初の落ち込みが来る。ベットを上げれば記録は伸びやすいが尽きるのも早い。最低ベットを払えなくなれば終了で、100コインからやり直し（最高記録は残る）。 *(guessed: 数値)*"
+measures:
+  - id: step-time
+    value: 7.800
+    unit: ms
+    by: browser
+    detail: "mean 0.030 ms, slowest 7.800 ms, 530 steps"
+not_assessed:
+  - what: "keep"
+    why: "the brief has no Keep section"
